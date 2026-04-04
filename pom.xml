@@ -5,13 +5,20 @@
 	<groupId>FilaEDU</groupId>
 	<artifactId>eduFila</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<!-- DJL Dependencies -->
 		<!-- https://mvnrepository.com/artifact/ai.djl/api -->
 		<dependency>
 			<groupId>ai.djl</groupId>
 			<artifactId>api</artifactId>
-			<version>0.25.0</version>
+			<version>0.31.1</version>
 		</dependency>
 
 		<!--
@@ -19,7 +26,7 @@
 		<dependency>
 			<groupId>ai.djl.tensorflow</groupId>
 			<artifactId>tensorflow-engine</artifactId>
-			<version>0.25.0</version>
+			<version>0.31.1</version>
 		</dependency>
 
 		<!--
@@ -27,7 +34,7 @@
 		<dependency>
 			<groupId>ai.djl.tensorflow</groupId>
 			<artifactId>tensorflow-model-zoo</artifactId>
-			<version>0.23.0</version>
+			<version>0.31.1</version>
 		</dependency>
 
 		<!-- OpenCV Dependency -->
@@ -37,6 +44,35 @@
 			<version>4.8.1-0</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<mainClass>tela.TelaInicial</mainClass>
+					<systemProperties>
+						<systemProperty>
+							<key>file.encoding</key>
+							<value>UTF-8</value>
+						</systemProperty>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
 

@@ -1,0 +1,21 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< FilaEDU:eduFila >---------------------------
+[INFO] Building eduFila 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ eduFila ---
+[INFO] 
+[INFO] The following files have been resolved:
+[INFO]    ai.djl:api:jar:0.31.1:compile -- module ai.djl.api [auto]
+[INFO]    ai.djl.tensorflow:tensorflow-engine:jar:0.31.1:compile -- module ai.djl.tensorflow_engine [auto]
+[INFO]    ai.djl.tensorflow:tensorflow-model-zoo:jar:0.31.1:compile -- module ai.djl.tensorflow_model_zoo [auto]
+[INFO]    org.openpnp:opencv:jar:4.8.1-0:compile -- module opencv (auto)
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.966 s
+[INFO] Finished at: 2026-04-04T01:34:42-03:00
+[INFO] ------------------------------------------------------------------------

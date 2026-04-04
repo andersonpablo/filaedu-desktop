@@ -191,7 +191,7 @@ public class InteligenciaFila {
 
 				while (cap.read(frame)) {
 					
-					//Ajustando c√¢mera frontal do notebook
+					//Ajustando c‚mera frontal do notebook
 				    Core.flip(frame, frame, 1);
 				    
 					Mat blob = Dnn.blobFromImage(frame, 0.00392, sz, new Scalar(0), true, false);
@@ -338,7 +338,7 @@ public class InteligenciaFila {
 
 	    scheduler.scheduleAtFixedRate(
 	            tarefa,
-	            0,          // come√ßa imediatamente
+	            0,          // comeÁa imediatamente
 	            30,          // intervalo
 	            TimeUnit.SECONDS
 	    );

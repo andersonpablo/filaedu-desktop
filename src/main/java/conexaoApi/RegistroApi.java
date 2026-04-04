@@ -10,7 +10,7 @@ import java.time.ZoneOffset;
 
 public class RegistroApi {
 
-    private static final String ENDPOINT = "http://localhost:8080/api/registros/save";
+    private static final String ENDPOINT = "http://localhost:8082/api/registros/save";
 
     public static void enviarRegistro(Long lojaId, int totalAcumulado) {
 

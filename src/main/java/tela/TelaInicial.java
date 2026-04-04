@@ -58,8 +58,7 @@ public class TelaInicial extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(comboCamera.getSelectedIndex() == 0) {
-					JOptionPane.showMessageDialog(null, "POR FAVOR SELECIONE UM TIPO DE CÂMERA", "ALERTA", JOptionPane.WARNING_MESSAGE);
-					return;
+				JOptionPane.showMessageDialog(null, "POR FAVOR SELECIONE UM TIPO DE C�MERA", "ALERTA", JOptionPane.WARNING_MESSAGE);
 				}
 				
 				InteligenciaFila pc = new InteligenciaFila();
