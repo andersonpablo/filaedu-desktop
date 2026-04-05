@@ -32,7 +32,7 @@ public class TelaInicial extends JFrame {
 
 	public TelaInicial() {
 		setResizable(false);
-		setTitle("FilaEdu - Monitoramento de Filas");
+		setTitle("BiblioEdu - Monitoramento de Filas");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(TelaInicial.class.getResource("/img/icon.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 492, 343);

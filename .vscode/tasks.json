@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Maven Build Desktop",
+			"type": "shell",
+			"command": "mvnw.cmd",
+			"args": [
+				"clean",
+				"install"
+			],
+			"group": "build"
+		}
+	]
+}

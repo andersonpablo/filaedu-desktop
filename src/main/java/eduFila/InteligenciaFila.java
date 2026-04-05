@@ -71,7 +71,7 @@ public class InteligenciaFila {
 	private void initializeGUI() {
 		jframe = new JFrame("Video");
 		jframe.setIconImage(Toolkit.getDefaultToolkit().getImage(InteligenciaFila.class.getResource("/img/icon.jpg")));
-		jframe.setTitle("FilaEdu - Monitoramento de Filas");
+		jframe.setTitle("BiblioEdu - Monitoramento de Filas");
 		vidpanel = new VideoLabel();
 		jframe.getContentPane().setLayout(new BorderLayout());
 		jframe.getContentPane().add(vidpanel, BorderLayout.CENTER);
@@ -90,8 +90,8 @@ public class InteligenciaFila {
 		menuBar.setBackground(Color.BLACK);
 		jframe.setJMenuBar(menuBar);
 
-		JLabel lblNewLabel_3 = new JLabel(" Fila");
-		lblNewLabel_3.setForeground(new Color(155, 0, 0));
+		JLabel lblNewLabel_3 = new JLabel(" Biblio");
+		lblNewLabel_3.setForeground(new Color(46, 20, 255));
 		lblNewLabel_3.setFont(new Font("Eras Bold ITC", Font.BOLD, 30));
 		menuBar.add(lblNewLabel_3);
 

@@ -24,16 +24,11 @@ public class RegistroApi {
             conn.setReadTimeout(5000);
             conn.setDoOutput(true);
 
-            String json = """
-            {
-              "lojaId": %d,
-              "dataHora": "%s",
-              "totalAcumulado": %d
-            }
-            """.formatted(
-                    lojaId,
-                    OffsetDateTime.now(ZoneOffset.of("-03:00")),
-                    totalAcumulado
+            String json = String.format(
+                "{\"lojaId\": %d, \"dataHora\": \"%s\", \"totalAcumulado\": %d}",
+                lojaId,
+                OffsetDateTime.now(ZoneOffset.of("-03:00")),
+                totalAcumulado
             );
 
             try (OutputStream os = conn.getOutputStream()) {
