@@ -61,7 +61,8 @@ public class InteligenciaFila {
 	public JButton botaoIniciar;
 	public int cameraSelecionada;
 	
-	public Integer contadorPessoas;
+	private int contadorPessoas = 0;
+	private int ultimoTotalEnviado = 0;
 	private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
 	public InteligenciaFila() {
@@ -329,11 +330,16 @@ public class InteligenciaFila {
 	private void chamarApiComTimer() {
 
 	    Runnable tarefa = () -> {
-	        int totalAtual = (contadorPessoas != null) ? contadorPessoas : 0;
+	        int totalAtual = contadorPessoas;
+	        int delta = Math.max(0, totalAtual - ultimoTotalEnviado);
+	        ultimoTotalEnviado = totalAtual;
 
-	        RegistroApi.enviarRegistro(1L, totalAtual);
-
-	        System.out.println("Enviado para API: " + totalAtual);
+	        if (delta > 0) {
+	            RegistroApi.enviarRegistro(1L, delta);
+	            System.out.println("Enviado para API: " + delta + " (novas pessoas)");
+	        } else {
+	            System.out.println("Nenhuma nova pessoa para enviar. Contagem atual: " + totalAtual);
+	        }
 	    };
 
 	    scheduler.scheduleAtFixedRate(
